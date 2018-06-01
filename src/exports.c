@@ -1,3 +1,4 @@
+//License: GPLv3.0
 #include "exports.h"
 
 

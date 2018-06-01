@@ -1,3 +1,4 @@
+//License: GPLv3.0
 #include "misc.h"
 
 long align(long size, long align)

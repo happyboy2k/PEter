@@ -1,3 +1,4 @@
+//License: GPLv3.0
 /*! \file imports.h
     \brief These functions give you information about the import table.
 */

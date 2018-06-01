@@ -1,3 +1,4 @@
+//License: GPLv3.0
 #include "imports.h"
 
 IMAGE_IMPORT_DESCRIPTOR *imports_by_index_get_import_descriptor(void *image, int idtIdx)

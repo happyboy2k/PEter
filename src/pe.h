@@ -1,3 +1,4 @@
+//License: GPLv3.0
 #ifndef PE_H
 #define PE_H
 #include <stdint.h>

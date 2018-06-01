@@ -1,3 +1,4 @@
+//License: GPLv3.0
 /*! \file sections.h
     \brief This file contains functions for getting information concerning the
            section headers (e.g. sections_by_name_is_writable() informs you

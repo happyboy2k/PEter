@@ -1,3 +1,4 @@
+//License: GPLv3.0
 #include "hdrs.h"
 
 int hdrs_init(hdrs *self, void *image)

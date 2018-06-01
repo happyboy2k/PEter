@@ -1,3 +1,4 @@
+//License: GPLv3.0
 /*! \file peter.h
     \brief This file is the file you can actually include for using the library.
            It does nothing but including other header files.

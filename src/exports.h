@@ -1,3 +1,4 @@
+//License: GPLv3.0
 /*! \file exports.h
     \brief These functions can be used to get information from a PE files export header.
 */
