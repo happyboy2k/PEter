@@ -1,0 +1,140 @@
+\begin{theindex}
+
+  \item {/home/x/git-\/repos/peter/src/exports.\+h}, \hyperpage{3}
+  \item {/home/x/git-\/repos/peter/src/imports.\+h}, \hyperpage{5}
+  \item {/home/x/git-\/repos/peter/src/peter.\+h}, \hyperpage{8}
+  \item {/home/x/git-\/repos/peter/src/sections.\+h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {exports.\+h}
+    \subitem {exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name}, 
+		\hyperpage{4}
+    \subitem {exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal}, 
+		\hyperpage{4}
+    \subitem {exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index}, 
+		\hyperpage{4}
+    \subitem {exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name}, 
+		\hyperpage{4}
+  \item {exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name}
+    \subitem {exports.\+h}, \hyperpage{4}
+  \item {exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal}
+    \subitem {exports.\+h}, \hyperpage{4}
+  \item {exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index}
+    \subitem {exports.\+h}, \hyperpage{4}
+  \item {exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name}
+    \subitem {exports.\+h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {imports.\+h}
+    \subitem {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}, 
+		\hyperpage{6}
+    \subitem {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor}, 
+		\hyperpage{6}
+    \subitem {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index}, 
+		\hyperpage{6}
+    \subitem {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name}, 
+		\hyperpage{7}
+    \subitem {imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name}, 
+		\hyperpage{7}
+    \subitem {imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index}, 
+		\hyperpage{8}
+  \item {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}
+    \subitem {imports.\+h}, \hyperpage{6}
+  \item {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor}
+    \subitem {imports.\+h}, \hyperpage{6}
+  \item {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index}
+    \subitem {imports.\+h}, \hyperpage{6}
+  \item {imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name}
+    \subitem {imports.\+h}, \hyperpage{7}
+  \item {imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name}
+    \subitem {imports.\+h}, \hyperpage{7}
+  \item {imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index}
+    \subitem {imports.\+h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {ptr\+\_\+to\+\_\+rva}
+    \subitem {sections.\+h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {raw\+\_\+to\+\_\+rva}
+    \subitem {sections.\+h}, \hyperpage{10}
+  \item {rva\+\_\+to\+\_\+ptr}
+    \subitem {sections.\+h}, \hyperpage{12}
+  \item {rva\+\_\+to\+\_\+raw}
+    \subitem {sections.\+h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {sections.\+h}
+    \subitem {ptr\+\_\+to\+\_\+rva}, \hyperpage{10}
+    \subitem {raw\+\_\+to\+\_\+rva}, \hyperpage{10}
+    \subitem {rva\+\_\+to\+\_\+ptr}, \hyperpage{12}
+    \subitem {rva\+\_\+to\+\_\+raw}, \hyperpage{12}
+    \subitem {sections\+\_\+add\+\_\+section}, \hyperpage{12}
+    \subitem {sections\+\_\+by\+\_\+index\+\_\+get\+\_\+sh}, 
+		\hyperpage{13}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+enlarge}, \hyperpage{13}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+characteristics}, 
+		\hyperpage{13}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+index}, 
+		\hyperpage{14}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+pointer\+\_\+to\+\_\+memory}, 
+		\hyperpage{14}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+sh}, 
+		\hyperpage{14}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+executable}, 
+		\hyperpage{15}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+readable}, 
+		\hyperpage{15}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+writable}, 
+		\hyperpage{15}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+characteristics}, 
+		\hyperpage{16}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+executable}, 
+		\hyperpage{16}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+name}, 
+		\hyperpage{16}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+readable}, 
+		\hyperpage{17}
+    \subitem {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+writable}, 
+		\hyperpage{17}
+    \subitem {sections\+\_\+get\+\_\+sizeof\+\_\+image\+\_\+after\+\_\+add\+\_\+section}, 
+		\hyperpage{17}
+  \item {sections\+\_\+add\+\_\+section}
+    \subitem {sections.\+h}, \hyperpage{12}
+  \item {sections\+\_\+by\+\_\+index\+\_\+get\+\_\+sh}
+    \subitem {sections.\+h}, \hyperpage{13}
+  \item {sections\+\_\+by\+\_\+name\+\_\+enlarge}
+    \subitem {sections.\+h}, \hyperpage{13}
+  \item {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+characteristics}
+    \subitem {sections.\+h}, \hyperpage{13}
+  \item {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+index}
+    \subitem {sections.\+h}, \hyperpage{14}
+  \item {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+pointer\+\_\+to\+\_\+memory}
+    \subitem {sections.\+h}, \hyperpage{14}
+  \item {sections\+\_\+by\+\_\+name\+\_\+get\+\_\+sh}
+    \subitem {sections.\+h}, \hyperpage{14}
+  \item {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+executable}
+    \subitem {sections.\+h}, \hyperpage{15}
+  \item {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+readable}
+    \subitem {sections.\+h}, \hyperpage{15}
+  \item {sections\+\_\+by\+\_\+name\+\_\+is\+\_\+writable}
+    \subitem {sections.\+h}, \hyperpage{15}
+  \item {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+characteristics}
+    \subitem {sections.\+h}, \hyperpage{16}
+  \item {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+executable}
+    \subitem {sections.\+h}, \hyperpage{16}
+  \item {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+name}
+    \subitem {sections.\+h}, \hyperpage{16}
+  \item {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+readable}
+    \subitem {sections.\+h}, \hyperpage{17}
+  \item {sections\+\_\+by\+\_\+name\+\_\+set\+\_\+writable}
+    \subitem {sections.\+h}, \hyperpage{17}
+  \item {sections\+\_\+get\+\_\+sizeof\+\_\+image\+\_\+after\+\_\+add\+\_\+section}
+    \subitem {sections.\+h}, \hyperpage{17}
+
+\end{theindex}

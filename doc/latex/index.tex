@@ -1,0 +1,12 @@
+\hypertarget{index_Introduction}{}\section{Introduction}\label{index_Introduction}
+\hypertarget{index_hdrs}{}\subsection{hdrs}\label{index_hdrs}
+This library helps you change Portable Executables. Right now you can just alter the export and import headers and the section table. Of Cause you can change the raw MZ and NT Headers as well. This is how it works\+: 
+\begin{DoxyCode}
+hdrs h;
+hdrs\_init(&h, file);
+printf(\textcolor{stringliteral}{"PE files entry point (RVA): 0x%x\(\backslash\)n"},
+       hdrs\_get\_address\_of\_entry\_point(&h));
+hdrs\_destroy(&h);
+\end{DoxyCode}
+ This exeample will print the value of the Address\+Of\+Entry\+Point field. You can get almost all other header values by using functions starting with the hdrs\+\_\+ prefix. They are build up like this\+: hdrs\+\_\+$<$set/get$>$\+\_\+field\+\_\+name(hdrs $\ast$hdrs\+Object) if set was choosen then you give it a second parameter which contains the value you want to set. \hypertarget{index_imports}{}\subsection{exports sections}\label{index_imports}
+The functions for maipulating imports, exports and sections are documented. In their header files (\hyperlink{sections_8h}{sections.\+h}, \hyperlink{imports_8h}{imports.\+h}, \hyperlink{exports_8h}{exports.\+h}). They don\textquotesingle{}t need an init() function to be called. You can just use them with a pointer to the raw file image you want to work with. 

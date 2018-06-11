@@ -1,0 +1,16 @@
+/*! \mainpage PEter 
+    \section Introduction
+    \subsection hdrs
+    This library helps you change Portable Executables. Right now you can just alter the export and import headers and the section table. Of Cause you can change the raw MZ and NT Headers as well. This is how it works:
+\code
+    hdrs h;
+    hdrs_init(&h, file);
+    printf("PE files entry point (RVA): 0x%x\n",
+           hdrs_get_address_of_entry_point(&h));
+    hdrs_destroy(&h);
+\endcode
+    This exeample will print the value of the AddressOfEntryPoint field. You can get almost all other header values by using functions starting with the hdrs_ prefix. They are build up like this:
+    hdrs_<set/get>_field_name(hdrs *hdrsObject) if set was choosen then you give it a second parameter which contains the value you want to set.
+    \subsection imports exports sections
+    The functions for maipulating imports, exports and sections are documented. In their header files (sections.h, imports.h, exports.h). They don't need an init() function to be called. You can just use them with a pointer to the raw file image you want to work with.
+   */ 

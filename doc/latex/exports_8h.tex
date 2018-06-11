@@ -1,0 +1,102 @@
+\hypertarget{exports_8h}{}\section{/home/x/git-\/repos/\+P\+Eter/src/exports.h File Reference}
+\label{exports_8h}\index{/home/x/git-\/repos/\+P\+Eter/src/exports.\+h@{/home/x/git-\/repos/\+P\+Eter/src/exports.\+h}}
+
+
+These functions can be used to get information from a PE files export header.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{exports_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{exports_8h_a09859e90782da27c2402faa733c6c208}{exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name} (void $\ast$image, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em returns the ordinal for the function you name \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{exports_8h_a4490ee501168af2361054f4679b318ab}{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name} (void $\ast$image, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em returns a functions address \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{exports_8h_af4c32bfeafff566f20334782e38a0397}{exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index} (void $\ast$image, const uint32\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em returns the first function name in the export headerif idx = 0, the second if idx = 1 and so on \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{exports_8h_adda1f24d002772947aa4a4daf885e489}{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal} (void $\ast$image, uint32\+\_\+t ord)
+\begin{DoxyCompactList}\small\item\em you give it an ordinal and you get a pointer to a function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These functions can be used to get information from a PE files export header. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{exports_8h_a4490ee501168af2361054f4679b318ab}\label{exports_8h_a4490ee501168af2361054f4679b318ab}} 
+\index{exports.\+h@{exports.\+h}!exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name@{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name}}
+\index{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name@{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name}!exports.\+h@{exports.\+h}}
+\subsubsection{\texorpdfstring{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name()}{exports\_get\_function\_by\_name()}}
+{\footnotesize\ttfamily void$\ast$ exports\+\_\+get\+\_\+function\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+returns a functions address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is a pointer to the pe image you want to analyze \\
+\hline
+{\em name} & is a pointer on the name of the A\+PI function you want the address of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{exports_8h_adda1f24d002772947aa4a4daf885e489}\label{exports_8h_adda1f24d002772947aa4a4daf885e489}} 
+\index{exports.\+h@{exports.\+h}!exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal@{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal}}
+\index{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal@{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal}!exports.\+h@{exports.\+h}}
+\subsubsection{\texorpdfstring{exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal()}{exports\_get\_function\_by\_ordinal()}}
+{\footnotesize\ttfamily void$\ast$ exports\+\_\+get\+\_\+function\+\_\+by\+\_\+ordinal (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{uint32\+\_\+t}]{ord }\end{DoxyParamCaption})}
+
+
+
+you give it an ordinal and you get a pointer to a function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & $<$-- like above \\
+\hline
+{\em ord} & should be one of the values you can find in the odinal list of the P\+Es export table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{exports_8h_af4c32bfeafff566f20334782e38a0397}\label{exports_8h_af4c32bfeafff566f20334782e38a0397}} 
+\index{exports.\+h@{exports.\+h}!exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index@{exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index}}
+\index{exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index@{exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index}!exports.\+h@{exports.\+h}}
+\subsubsection{\texorpdfstring{exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index()}{exports\_get\_name\_by\_index()}}
+{\footnotesize\ttfamily char$\ast$ exports\+\_\+get\+\_\+name\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{const uint32\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+
+
+returns the first function name in the export headerif idx = 0, the second if idx = 1 and so on 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is a pointer on the pe image \\
+\hline
+{\em idx} & is 0 for the first name and so on... (like an array index) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{exports_8h_a09859e90782da27c2402faa733c6c208}\label{exports_8h_a09859e90782da27c2402faa733c6c208}} 
+\index{exports.\+h@{exports.\+h}!exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name@{exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name}}
+\index{exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name@{exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name}!exports.\+h@{exports.\+h}}
+\subsubsection{\texorpdfstring{exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name()}{exports\_get\_ordinal\_by\_name()}}
+{\footnotesize\ttfamily uint16\+\_\+t exports\+\_\+get\+\_\+ordinal\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+returns the ordinal for the function you name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is a pointer to the first byte of the image you want to analyze \\
+\hline
+{\em name} & is a pointer on the name of the function you want to get the ordinal of \\
+\hline
+\end{DoxyParams}

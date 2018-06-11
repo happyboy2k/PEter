@@ -1,0 +1,169 @@
+\hypertarget{imports_8h}{}\section{/home/x/git-\/repos/\+P\+Eter/src/imports.h File Reference}
+\label{imports_8h}\index{/home/x/git-\/repos/\+P\+Eter/src/imports.\+h@{/home/x/git-\/repos/\+P\+Eter/src/imports.\+h}}
+
+
+These functions give you information about the import table.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{imports_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR $\ast$ \hyperlink{imports_8h_a8036faf1c005de380202f58ce21d7d69}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor} (void $\ast$image, int i)
+\begin{DoxyCompactList}\small\item\em return the import descriptor with the index i \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{imports_8h_a86884a4f94524df4230d626c416cb861}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name} (void $\ast$image, int i)
+\begin{DoxyCompactList}\small\item\em returns a char $\ast$pointer on the import descriptors name (the dll name) \end{DoxyCompactList}\item 
+int \hyperlink{imports_8h_a97c863ceb042fe8400260af874ab20a5}{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index} (void $\ast$image, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em returns the import descroptor index that fits the name parameter \end{DoxyCompactList}\item 
+int \hyperlink{imports_8h_a46d844dcd94f11ce99b7e158588ac4a9}{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name} (void $\ast$image, const char $\ast$dll\+Name, const char $\ast$func\+Name)
+\begin{DoxyCompactList}\small\item\em returns the index of the imported fucntion of a dll (that\textquotesingle{}s not an ordinal) \end{DoxyCompactList}\item 
+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+B\+Y\+\_\+\+N\+A\+ME $\ast$ \hyperlink{imports_8h_a9a64f9e3e4b74e10be4770f1f6be8595}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index} (void $\ast$image, int idt\+Idx, int int\+Idx)
+\begin{DoxyCompactList}\small\item\em you give it two indexes (import descriptor and its import name table) and you get the name of the function these two indexes discribe. That means you will get the first function name of the first imported dll if idt\+Idx and int\+Idx are both == 0. The returned pointer is an I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+B\+Y\+\_\+\+N\+A\+ME struct which is actually a uint8\+\_\+t array but with a word (16bit) value at its start. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{imports_8h_ab9faff9e489626206a9a65fa6ddbe30e}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index} (void $\ast$image, int idt\+Idx, int iat\+Idx)
+\begin{DoxyCompactList}\small\item\em like \hyperlink{imports_8h_a9a64f9e3e4b74e10be4770f1f6be8595}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index()} but doesn\textquotesingle{}t return a name but a pointer on I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+TA if it\textquotesingle{}s a 32bit executable this function will return I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+T\+A32 and if you have 64bit you may use the return value as a pointer on I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+T\+A64 \end{DoxyCompactList}\item 
+void \hyperlink{imports_8h_aef79655590df81878c67d7addb032f58}{imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index} (void $\ast$image, int idt\+Idx, int iat\+Idx, void $\ast$address)
+\begin{DoxyCompactList}\small\item\em Writes an address into the specified field of the import address table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These functions give you information about the import table. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{imports_8h_ab9faff9e489626206a9a65fa6ddbe30e}\label{imports_8h_ab9faff9e489626206a9a65fa6ddbe30e}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}}
+\index{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index()}{imports\_by\_index\_get\_iaddr\_thunk\_by\_index()}}
+{\footnotesize\ttfamily void$\ast$ imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{int}]{idt\+Idx,  }\item[{int}]{iat\+Idx }\end{DoxyParamCaption})}
+
+
+
+like \hyperlink{imports_8h_a9a64f9e3e4b74e10be4770f1f6be8595}{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index()} but doesn\textquotesingle{}t return a name but a pointer on I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+TA if it\textquotesingle{}s a 32bit executable this function will return I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+T\+A32 and if you have 64bit you may use the return value as a pointer on I\+M\+A\+G\+E\+\_\+\+T\+H\+U\+N\+K\+\_\+\+D\+A\+T\+A64 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is the PE file \\
+\hline
+{\em idt\+Idx} & is an import descriptor index \\
+\hline
+{\em iat\+Idx} & is the address table index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_a8036faf1c005de380202f58ce21d7d69}\label{imports_8h_a8036faf1c005de380202f58ce21d7d69}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor}}
+\index{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor()}{imports\_by\_index\_get\_import\_descriptor()}}
+{\footnotesize\ttfamily I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR$\ast$ imports\+\_\+by\+\_\+index\+\_\+get\+\_\+import\+\_\+descriptor (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{int}]{idt\+Idx }\end{DoxyParamCaption})}
+
+
+
+return the import descriptor with the index i 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & points to the image you want to analyze \\
+\hline
+{\em i} & is 0 if you need the first import descriptor i = 1 for the second and so on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_a9a64f9e3e4b74e10be4770f1f6be8595}\label{imports_8h_a9a64f9e3e4b74e10be4770f1f6be8595}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index}}
+\index{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index()}{imports\_by\_index\_get\_iname\_by\_index()}}
+{\footnotesize\ttfamily I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+B\+Y\+\_\+\+N\+A\+ME$\ast$ imports\+\_\+by\+\_\+index\+\_\+get\+\_\+iname\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{int}]{idt\+Idx,  }\item[{int}]{int\+Idx }\end{DoxyParamCaption})}
+
+
+
+you give it two indexes (import descriptor and its import name table) and you get the name of the function these two indexes discribe. That means you will get the first function name of the first imported dll if idt\+Idx and int\+Idx are both == 0. The returned pointer is an I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+B\+Y\+\_\+\+N\+A\+ME struct which is actually a uint8\+\_\+t array but with a word (16bit) value at its start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & points to the PE file \\
+\hline
+{\em idt\+Idx} & is the import descriptor index (starting at 0 for the first import descriptor) \\
+\hline
+{\em int\+Idx} & is the name table index (also starting with 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_a86884a4f94524df4230d626c416cb861}\label{imports_8h_a86884a4f94524df4230d626c416cb861}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name}}
+\index{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name@{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name()}{imports\_by\_index\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ imports\+\_\+by\+\_\+index\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{int}]{idt\+Idx }\end{DoxyParamCaption})}
+
+
+
+returns a char $\ast$pointer on the import descriptors name (the dll name) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & points tor the image you want to analyzee \\
+\hline
+{\em i} & is an index indicating which import disc. you want the name of (starting with 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_aef79655590df81878c67d7addb032f58}\label{imports_8h_aef79655590df81878c67d7addb032f58}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}}
+\index{imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index@{imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index()}{imports\_by\_index\_set\_iaddr\_thunk\_by\_index()}}
+{\footnotesize\ttfamily void imports\+\_\+by\+\_\+index\+\_\+set\+\_\+iaddr\+\_\+thunk\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{int}]{idt\+Idx,  }\item[{int}]{iat\+Idx,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Writes an address into the specified field of the import address table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is the PE file. \\
+\hline
+{\em idt\+Idx} & is the import descriptor index. \\
+\hline
+{\em iat\+Idx} & is the address table index. \\
+\hline
+{\em address} & is the address you want to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_a46d844dcd94f11ce99b7e158588ac4a9}\label{imports_8h_a46d844dcd94f11ce99b7e158588ac4a9}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name@{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name}}
+\index{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name@{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name()}{imports\_by\_name\_get\_iname\_index\_by\_name()}}
+{\footnotesize\ttfamily int imports\+\_\+by\+\_\+name\+\_\+get\+\_\+iname\+\_\+index\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{const char $\ast$}]{dll\+Name,  }\item[{const char $\ast$}]{func\+Name }\end{DoxyParamCaption})}
+
+
+
+returns the index of the imported fucntion of a dll (that\textquotesingle{}s not an ordinal) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & points to the PE file you want information of \\
+\hline
+{\em dll\+Name} & is the name of the dll (import descriptor name) where the function name resides in \\
+\hline
+{\em func\+Name} & is the name of the function you want the index of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{imports_8h_a97c863ceb042fe8400260af874ab20a5}\label{imports_8h_a97c863ceb042fe8400260af874ab20a5}} 
+\index{imports.\+h@{imports.\+h}!imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index@{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index}}
+\index{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index@{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index}!imports.\+h@{imports.\+h}}
+\subsubsection{\texorpdfstring{imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index()}{imports\_by\_name\_get\_index()}}
+{\footnotesize\ttfamily int imports\+\_\+by\+\_\+name\+\_\+get\+\_\+index (\begin{DoxyParamCaption}\item[{void $\ast$}]{image,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+returns the import descroptor index that fits the name parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & points on the image you want to analyze \\
+\hline
+{\em name} & the dll name (== import descriptor name) you want the idx of \\
+\hline
+\end{DoxyParams}
