@@ -1,0 +1,10 @@
+Installation:
+autoreconf -i
+./configure
+make
+make install
+
+
+Usage:
+You just need to include the "peter.h" file and link with this library.
+example: gcc test.c -lpeter
